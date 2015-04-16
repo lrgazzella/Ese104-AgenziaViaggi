@@ -6,6 +6,7 @@ public class Prenotazione {
 	private int postiRichiesti;
 	private Cliente cliente;
 	private Filiale filiale;
+	@SuppressWarnings("unused")
 	private Pacchetto pacchetto;
 	
 	public Prenotazione(String codice, int postiRichiesti, Cliente c, Filiale f){

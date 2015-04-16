@@ -10,17 +10,20 @@ public class Pacchetto {
 	private Vector<Prenotazione> prenotazioni;
 	
 	public Pacchetto(String codice, String descrizione, int postiTotali){
-		
+		this.codice = codice;
+		this.descrizione = descrizione;
+		this.postiTotali = postiTotali;
+		this.prenotazioni = new Vector<Prenotazione>();
 	}
 	
 	public void addPrenotazione(Prenotazione p){
-		
+		this.prenotazioni.addElement(p);
 	}
 	public int getPostiDisponibili(){
 		int size = prenotazioni.size();
 		return this.postiTotali - size;
 	}
-	public Vector<Prenotazione> getPrenotazione(Prenotazione p){
+	public Vector<Prenotazione> getPrenotazioni(){
 		return prenotazioni;
 	}
 	public int getPostiTotali(){

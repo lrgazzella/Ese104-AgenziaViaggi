@@ -10,6 +10,13 @@ public class Filiale {
 	public int getNumero(){
 		return this.numero;
 	}
+
+	@Override
+	public String toString() {
+		return "Filiale [numero=" + numero + "]";
+	}
+	
+	
 	
 	
 }
