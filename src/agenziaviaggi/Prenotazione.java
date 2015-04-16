@@ -6,7 +6,6 @@ public class Prenotazione {
 	private int postiRichiesti;
 	private Cliente cliente;
 	private Filiale filiale;
-	@SuppressWarnings("unused")
 	private Pacchetto pacchetto;
 	
 	public Prenotazione(String codice, int postiRichiesti, Cliente c, Filiale f){
@@ -31,6 +30,14 @@ public class Prenotazione {
 	public void setPacchetto(Pacchetto p){
 		this.pacchetto = p;
 	}
+
+	@Override
+	public String toString() {
+		return "Prenotazione [codice=" + codice + ", postiRichiesti="
+				+ postiRichiesti + ", cliente=" + cliente + ", filiale="
+				+ filiale + ", pacchetto=" + pacchetto + "]";
+	}
+	
 	
 	
 	

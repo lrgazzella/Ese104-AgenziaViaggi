@@ -16,8 +16,13 @@ public class Pacchetto {
 		this.prenotazioni = new Vector<Prenotazione>();
 	}
 	
-	public void addPrenotazione(Prenotazione p){
-		this.prenotazioni.addElement(p);
+	public void addPrenotazione(Prenotazione p) throws Exception{
+		if(this.getPostiDisponibili() > 0 ){
+			this.prenotazioni.addElement(p);
+		}else{
+			throw new Exception("Posto non disponibile");
+		}
+		
 	}
 	public int getPostiDisponibili(){
 		int size = prenotazioni.size();
@@ -35,6 +40,15 @@ public class Pacchetto {
 	public String getCodice(){
 		return this.codice;
 	}
+
+	@Override
+	public String toString() {
+		return "Pacchetto [codice=" + codice + ", descrizione=" + descrizione
+				+ ", postiTotali=" + postiTotali + ", prenotazioni="
+				+ prenotazioni + "]";
+	}
+	
+	
 	
 	
 	
