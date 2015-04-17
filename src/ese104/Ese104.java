@@ -14,6 +14,12 @@ public class Ese104 {
 		pacchetto.addPrenotazione(prenotazione);
 		pacchetto.addPrenotazione(prenotazione);
 		pacchetto.addPrenotazione(prenotazione);
+		try{
+			pacchetto.addPrenotazione(prenotazione);
+			throw new Exception("Errore");
+		}catch(Exception e){
+			System.out.println("Controllo superato");
+		}
 		
 		
 		for(int i=0; i<pacchetto.getPrenotazioni().size(); i++){

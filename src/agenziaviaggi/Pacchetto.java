@@ -18,7 +18,8 @@ public class Pacchetto {
 	
 	public void addPrenotazione(Prenotazione p) throws Exception{
 		if(this.getPostiDisponibili() > 0 ){
-			this.prenotazioni.addElement(p);
+			prenotazioni.addElement(p);
+			p.setPacchetto(this);
 		}else{
 			throw new Exception("Posto non disponibile");
 		}
@@ -29,7 +30,7 @@ public class Pacchetto {
 		return this.postiTotali - size;
 	}
 	public Vector<Prenotazione> getPrenotazioni(){
-		return prenotazioni;
+		return this.prenotazioni;
 	}
 	public int getPostiTotali(){
 		return this.postiTotali;

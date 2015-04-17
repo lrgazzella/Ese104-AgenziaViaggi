@@ -35,10 +35,13 @@ public class Prenotazione {
 	public String toString() {
 		return "Prenotazione [codice=" + codice + ", postiRichiesti="
 				+ postiRichiesti + ", cliente=" + cliente + ", filiale="
-				+ filiale + ", pacchetto=" + pacchetto + "]";
+				+ filiale + ", Pacchetto [codice=" + pacchetto.getCodice() + ", descrizione=" + pacchetto.getDescrizione()
+				+ ", postiTotali=" + pacchetto.getPostiTotali() + ", prenotazioni="
+				+ "]";
 	}
+
 	
 	
 	
-	
+		
 }
